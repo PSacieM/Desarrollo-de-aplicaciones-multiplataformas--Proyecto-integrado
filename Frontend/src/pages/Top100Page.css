@@ -1,0 +1,185 @@
+/* Estilos generales para las tarjetas de juegos */
+.top-100-page .game-card {
+  display: flex; /* Flexbox para layout en fila */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Espacio entre los elementos */
+  padding: 10px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.2s; /* Suavizado del cambio de color al hover */
+}
+
+/* Efecto hover en la tarjeta de juego */
+.top-100-page .game-card:hover {
+  background-color: #e9ecef; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el número de ranking */
+.top-100-page .ranking-number {
+  font-size: 24px; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+  color: #343a40; /* Gris oscuro */
+  margin-right: 15px; /* Espacio a la derecha */
+  text-align: right; /* Alineación del texto a la derecha */
+}
+
+/* Imagen del juego */
+.top-100-page .game-image {
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+/* Información del juego */
+.top-100-page .game-info {
+  flex-grow: 1; /* Hace que ocupe todo el espacio restante */
+}
+
+/* Puntuación del juego */
+.top-100-page .game-score {
+  font-size: 20px; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+}
+
+/* Selector de formulario */
+.top-100-page .form-select {
+  width: 100%; /* Ancho completo */
+  max-width: 100%; /* Ancho máximo */
+  overflow: hidden; /* Oculta el contenido que desborde */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos si es necesario */
+  white-space: nowrap; /* No permite saltos de línea */
+}
+
+/* Dropdown personalizado */
+.custom-select-dropdown {
+  width: 100%; /* Ancho completo */
+  max-width: 100px; /* Máximo 100px */
+  overflow: hidden; /* Oculta contenido que sobrepase */
+  text-overflow: ellipsis; /* Puntos suspensivos si es necesario */
+  white-space: nowrap; /* Sin saltos de línea */
+}
+
+.custom-select-dropdown select {
+  max-width: 100px; /* Máximo 100px para el select */
+}
+
+.custom-select-dropdown option {
+  white-space: nowrap; /* Sin saltos de línea */
+  overflow: hidden; /* Oculta contenido que sobrepase */
+  text-overflow: ellipsis; /* Puntos suspensivos */
+}
+
+/* Ajustes responsive para dropdown */
+@media (max-width: 768px) {
+  .top-100-page .dropdown-menu {
+    max-width: 100%; /* Ocupa el 100% en pantallas pequeñas */
+  }
+}
+
+/* Ajustes del selector de formulario */
+.top-100-page .form-select {
+  max-width: 100%; /* Ancho máximo 100% */
+  width: 100%; /* Ancho 100% */
+  white-space: nowrap; /* Sin saltos de línea */
+  overflow: hidden; /* Oculta desbordes */
+  text-overflow: ellipsis; /* Puntos suspensivos */
+}
+
+/* Opciones del selector */
+.top-100-page .form-select option {
+  max-width: 100%; /* Máximo 100% */
+  white-space: nowrap; /* Sin saltos de línea */
+  overflow: hidden; /* Oculta desbordes */
+  text-overflow: ellipsis; /* Puntos suspensivos */
+}
+
+/* Ajustes generales para el menú desplegable */
+.top-100-page .dropdown-menu {
+  max-width: 100%; /* Ancho máximo 100% */
+  overflow-x: hidden; /* Oculta desplazamiento horizontal */
+  white-space: nowrap; /* Sin saltos de línea */
+}
+
+/* Ajustes responsive adicionales */
+@media (max-width: 768px) {
+  .top-100-page .form-select {
+    max-width: 100%; /* Máximo 100% */
+  }
+
+  .top-100-page .dropdown-menu {
+    max-width: 90vw; /* 90% del ancho de la ventana */
+  }
+}
+
+/* Ajustes de layout en pantallas pequeñas */
+@media (max-width: 768px) {
+  .top-100-page .d-flex.align-items-center.position-relative.mb-3 {
+    display: flex;
+    flex-direction: row; /* Layout en fila */
+    align-items: flex-start; /* Alineación inicial */
+    gap: 12px; /* Separación entre elementos */
+  }
+
+  .top-100-page .ranking-number {
+    font-size: 18px; /* Fuente más pequeña */
+    color: #3F51B5; /* Azul principal */
+    font-weight: bold; /* Negrita */
+    margin-top: 12px; /* Margen superior */
+    min-width: 24px; /* Ancho mínimo */
+    text-align: center; /* Centrado */
+  }
+
+  /* Tarjeta de juego en vista móvil */
+  .top-100-page .card {
+    display: flex !important;
+    flex-direction: column !important; /* Disposición en columna */
+    align-items: center !important; /* Centrado */
+    text-align: center; /* Texto centrado */
+    width: 100%; /* Ancho completo */
+    padding: 12px !important; /* Espaciado interno */
+  }
+
+  .top-100-page .card img {
+    width: 140px !important; /* Ancho fijo */
+    height: 200px !important; /* Altura fija */
+    object-fit: cover; /* Cubrir sin distorsión */
+    margin-bottom: 10px; /* Margen inferior */
+  }
+
+  /* Título del juego */
+  .top-100-page .card h5 {
+    font-size: 1rem; /* Fuente normal */
+    margin-bottom: 5px; /* Espacio inferior */
+    color: #3F51B5; /* Azul principal */
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  }
+
+  /* Texto adicional */
+  .top-100-page .card p {
+    font-size: 0.9rem; /* Fuente pequeña */
+    color: #512DA8; /* Morado oscuro */
+    margin-bottom: 8px; /* Espacio inferior */
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  }
+
+  /* Estilo de puntuación en móvil */
+  .top-100-page .game-score {
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Tamaño normal */
+    padding: 6px 12px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 6px; /* Margen superior */
+    align-self: center; /* Centrado en el contenedor */
+  }
+
+  /* Ajustes para el contenedor interno de la tarjeta */
+  .top-100-page .card .d-flex.align-items-center {
+    flex-direction: column !important; /* Layout en columna */
+    align-items: center !important; /* Centrado */
+    width: 100%; /* Ancho completo */
+  }
+
+  /* Centrado de la puntuación */
+  .top-100-page .card .game-score {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

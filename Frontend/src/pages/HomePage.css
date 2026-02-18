@@ -1,0 +1,381 @@
+/* Variables globales */
+:root {
+  --color-principal: #3F51B5; /* Color azul principal */
+  --color-secundario: #9575CD; /* Color morado secundario */
+  --color-acento: #512DA8; /* Color morado de acento */
+  --color-fondo: #FFFFFF; /* Color de fondo blanco */
+  --color-texto: #212121; /* Color de texto negro */
+  --fuente-principal: 'Poppins', sans-serif; /* Fuente tipográfica principal */
+}
+
+/* Estilo global del body */
+body {
+  font-family: var(--fuente-principal); /* Usa la fuente principal */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  color: var(--color-texto); /* Texto negro */
+}
+
+/* Página principal Home */
+.home-page {
+  background-color: var(--color-fondo); /* Fondo blanco */
+  padding: 20px; /* Espaciado interior */
+  position: relative; /* Contexto para elementos posicionados */
+}
+
+/* Botones para el administrador */
+.admin-buttons {
+  position: relative; /* Contexto relativo */
+  z-index: 5; /* Prioridad visual por encima de otros elementos */
+  display: flex; /* Flexbox para distribución horizontal */
+  flex-wrap: wrap; /* Permite que los botones pasen a nueva línea si no caben */
+  gap: 10px; /* Espacio entre botones */
+  justify-content: flex-end; /* Alinear a la derecha */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Responsive: botones admin centrados en pantallas pequeñas */
+@media (max-width: 768px) {
+  .admin-buttons {
+    justify-content: center; /* Centrado horizontal */
+  }
+}
+
+/* Carrusel 3D personalizado */
+.custom-carousel-3d {
+  max-width: 800px; /* Ancho máximo del carrusel */
+  height: 400px; /* Altura fija */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  position: relative; /* Contexto relativo */
+  margin: 0 auto; /* Centrado horizontal con margen automático */
+  margin-bottom: 40px; /* Margen inferior */
+  overflow: hidden; /* Oculta elementos fuera del carrusel */
+}
+
+/* Elemento del carrusel */
+.carousel-3d-item {
+  position: absolute; /* Posición absoluta dentro del carrusel */
+  transition: transform 0.6s ease, opacity 0.6s ease; /* Animación suave */
+  opacity: 0; /* Oculto por defecto */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  transform-origin: center center; /* Origen de la transformación */
+}
+
+/* Elemento activo del carrusel */
+.carousel-3d-item.active {
+  opacity: 1; /* Totalmente visible */
+  transform: translateX(0) scale(1); /* Centrado, escala normal */
+  z-index: 3; /* Por encima de los otros elementos */
+}
+
+/* Elemento previo en el carrusel */
+.carousel-3d-item.prev {
+  opacity: 0.7; /* Semi-transparente */
+  transform: translateX(-220px) scale(0.8); /* Posicionado a la izquierda, reducido */
+  z-index: 2; /* Detrás del activo */
+}
+
+/* Elemento siguiente en el carrusel */
+.carousel-3d-item.next {
+  opacity: 0.7; /* Semi-transparente */
+  transform: translateX(220px) scale(0.8); /* Posicionado a la derecha, reducido */
+  z-index: 2; /* Detrás del activo */
+}
+
+/* Imagen dentro del carrusel */
+.carousel-3d-item img {
+  width: 250px; /* Ancho fijo */
+  height: 350px; /* Altura fija */
+  object-fit: cover; /* Cubrir el contenedor sin deformarse */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.6s ease; /* Animación suave en transformaciones */
+}
+
+/* Botón de navegación del carrusel */
+.carousel-3d-button {
+  position: absolute; /* Posición absoluta dentro del carrusel */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste de centrado vertical */
+  background-color: var(--color-acento); /* Color de fondo del botón */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px; /* Relleno interno */
+  cursor: pointer; /* Cursor de puntero al pasar por encima */
+  font-size: 24px; /* Tamaño del icono */
+  z-index: 5; /* Encima del contenido del carrusel */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  width: 40px; /* Ancho fijo */
+  height: 40px; /* Altura fija */
+  border-radius: 50%; /* Botón circular */
+}
+
+/* Botón izquierdo del carrusel */
+.carousel-3d-button.left {
+  left: 10px; /* Alineado a la izquierda */
+}
+
+/* Botón derecho del carrusel */
+.carousel-3d-button.right {
+  right: 10px; /* Alineado a la derecha */
+}
+
+/* Responsive: oculta el carrusel en pantallas pequeñas */
+@media (max-width: 768px) {
+  .custom-carousel-3d {
+    display: none; /* No mostrar el carrusel en móvil */
+  }
+}
+
+/* Estilo de títulos <h3> */
+h3 {
+  color: var(--color-texto); /* Color de texto */
+  font-family: var(--fuente-principal); /* Fuente principal */
+}
+
+/* Secciones de juegos populares y últimos comentarios */
+.popular-games,
+.latest-comments {
+  background-color: var(--color-fondo); /* Fondo blanco */
+  padding: 10px; /* Espaciado interior */
+  border-radius: 8px; /* Bordes redondeados */
+  align-items: stretch; /* Estirado vertical */
+}
+
+/* Estilo de las cards */
+.card {
+  border: none; /* Sin borde */
+  transition: 0.3s; /* Animación suave en hover */
+  font-family: var(--fuente-principal); /* Fuente principal */
+  color: var(--color-texto); /* Color de texto */
+  background-color: var(--color-fondo); /* Fondo blanco */
+}
+
+/* Efecto de hover en las cards */
+.card:hover {
+  transform: scale(1.02); /* Efecto zoom suave */
+}
+
+/* Logo en el navbar */
+.navbar-brand img {
+  height: 40px; /* Altura fija del logo */
+}
+
+/* Card de comentarios */
+.comment-card {
+  font-family: var(--fuente-principal); /* Fuente principal */
+  color: var(--color-texto); /* Color de texto */
+  flex-shrink: 0; /* No reducir tamaño en flexbox */
+  margin-right: 12px; /* Espacio derecho */
+}
+
+.comment-card .card-body {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+}
+
+/* Enlace de nombre de usuario */
+.username-link {
+  color: var(--color-principal); /* Color azul principal */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso de fuente medio */
+}
+
+/* Hover en enlace de nombre de usuario */
+.username-link:hover {
+  text-decoration: underline; /* Subrayado en hover */
+  color: var(--color-acento); /* Color morado acento */
+}
+
+/* Enlace de nombre de juego */
+.game-link {
+  color: var(--color-acento); /* Color morado acento */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso de fuente medio */
+}
+
+/* Hover en enlace de nombre de juego */
+.game-link:hover {
+  text-decoration: underline; /* Subrayado en hover */
+  color: var(--color-principal); /* Color azul principal */
+}
+
+/* Contenedor de texto de comentario */
+.comment-content {
+  overflow-wrap: break-word; /* Romper palabras largas */
+  word-wrap: break-word; /* Compatibilidad */
+  white-space: normal; /* Salto de línea normal */
+  min-width: 0; /* Ancho mínimo flexible */
+}
+
+/* Texto del comentario (truncado a 2 líneas) */
+.comment-text {
+  font-size: 15px; /* Tamaño de fuente */
+  color: var(--color-texto); /* Color de texto */
+  white-space: pre-line; /* Respetar saltos de línea */
+  word-wrap: break-word; /* Romper palabras largas */
+  overflow-wrap: break-word; /* Compatibilidad */
+  display: -webkit-box; /* Flexbox vertical (webkit) */
+  -webkit-box-orient: vertical; /* Orientación vertical */
+  -webkit-line-clamp: 2; /* Limitar a 2 líneas */
+  overflow: hidden; /* Ocultar el contenido que sobrepase */
+  text-overflow: ellipsis; /* Mostrar "..." al truncar */
+}
+
+/* Texto de comentario expandido (sin truncar) */
+.comment-text-expanded {
+  font-size: 15px; /* Tamaño de fuente */
+  color: var(--color-texto); /* Color de texto */
+  white-space: pre-line; /* Respetar saltos de línea */
+  word-wrap: break-word; /* Romper palabras largas */
+  overflow-wrap: break-word; /* Compatibilidad */
+}
+
+/* Contenedor flexible de sección */
+.section-container {
+  flex: 1; /* Ocupar todo el espacio disponible */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección vertical */
+  justify-content: space-between; /* Distribuir espacio */
+}
+
+/* Card de juegos populares y últimos comentarios */
+.popular-games .card,
+.latest-comments .card {
+  display: flex; /* Flexbox */
+  padding: 12px; /* Espaciado interior */
+}
+
+/* Margen inferior entre cards (excepto la última) */
+.popular-games .card:not(:last-child),
+.latest-comments .card:not(:last-child) {
+  margin-bottom: 16px; /* Margen inferior */
+}
+
+/* Fila con igual altura para columnas */
+.row.equal-height {
+  display: flex; /* Flexbox */
+  align-items: stretch; /* Estirar columnas verticalmente */
+}
+
+/* Columnas de la fila con igual altura */
+.row.equal-height > .col-md-6 {
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección vertical */
+}
+
+/* Media query: estilos para pantallas pequeñas (máx. 576px) */
+@media (max-width: 576px) {
+  /* Card de últimos comentarios */
+  .latest-comments .card {
+    min-height: 120px; /* Altura mínima */
+    padding: 16px 12px; /* Espaciado interior */
+  }
+
+  /* Texto de comentario en móvil */
+  .comment-text {
+    font-size: 14px; /* Tamaño de fuente reducido */
+  }
+
+  /* Texto de comentario truncado a 5 líneas en móvil */
+  .comment-text.truncate-3-lines {
+    -webkit-line-clamp: 5; /* Limitar a 5 líneas */
+  }
+
+  /* Botón pequeño de enlace */
+  .btn-link.btn-sm {
+    font-size: 13px; /* Tamaño de fuente */
+    padding: 0; /* Sin padding */
+    margin-top: 4px; /* Margen superior */
+  }
+
+  /* Card body de comentarios: layout en columna en móvil */
+  .comment-card .card-body {
+    flex-direction: column; /* Dirección vertical */
+    align-items: flex-start; /* Alinear a la izquierda */
+  }
+
+  /* Carrusel en móvil */
+  .carousel {
+    margin-bottom: 40px; /* Margen inferior */
+  }
+
+  /* Caption (texto sobre la imagen) del carrusel */
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semi-transparente */
+    padding: 10px 15px; /* Espaciado interior */
+    border-radius: 8px; /* Bordes redondeados */
+    bottom: 20px; /* Posición desde abajo */
+  }
+
+  /* Título dentro del caption */
+  .carousel-caption h3 {
+    color: #fff; /* Texto blanco */
+    font-size: 18px; /* Tamaño de fuente */
+    font-family: var(--fuente-principal); /* Fuente principal */
+    margin: 0; /* Sin margen */
+  }
+
+  /* Botones de navegación del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semi-transparente */
+    border-radius: 50%; /* Botón circular */
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Altura fija */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste de centrado vertical */
+  }
+
+  /* Iconos de los botones de navegación */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 70% 70%; /* Tamaño del icono */
+    background-color: transparent; /* Fondo transparente */
+    filter: brightness(0) invert(1); /* Icono blanco */
+  }
+
+  /* Hover en botones de navegación */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro en hover */
+  }
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: var(--color-principal) !important; /* Color azul principal */
+  border-color: var(--color-principal) !important; /* Borde azul */
+  color: #fff !important; /* Texto blanco */
+  font-family: var(--fuente-principal); /* Fuente principal */
+}
+
+/* Hover en botón primario */
+.btn-primary:hover {
+  background-color: var(--color-acento) !important; /* Morado de acento */
+  border-color: var(--color-acento) !important; /* Borde morado de acento */
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: var(--color-secundario) !important; /* Morado secundario */
+  border-color: var(--color-secundario) !important; /* Borde morado */
+  color: #fff !important; /* Texto blanco */
+  font-family: var(--fuente-principal); /* Fuente principal */
+}
+
+/* Hover en botón secundario */
+.btn-secondary:hover {
+  background-color: var(--color-acento) !important; /* Morado de acento */
+  border-color: var(--color-acento) !important; /* Borde morado de acento */
+}
+
+/* Texto muted (texto secundario) */
+.text-muted {
+  color: var(--color-texto) !important; /* Color de texto personalizado */
+  font-family: var(--fuente-principal); /* Fuente principal */
+}

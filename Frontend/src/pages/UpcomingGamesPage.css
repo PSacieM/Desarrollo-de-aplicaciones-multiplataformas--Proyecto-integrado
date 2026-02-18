@@ -1,0 +1,40 @@
+/* Estilos de las tarjetas de la página Upcoming Games */
+.upcoming-games-page .card {
+  transition: transform 0.2s; /* Animación de escala al hacer hover */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  background-color: #FFFFFF; /* Fondo blanco */
+  border: 1px solid #DCE1F5; /* Borde lila suave */
+}
+
+/* Efecto hover en la tarjeta */
+.upcoming-games-page .card:hover {
+  transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 4px 15px rgba(81, 45, 168, 0.2); /* Sombra morada suave */
+}
+
+/* Imagen dentro de la tarjeta */
+.upcoming-games-page .card img {
+  border-radius: 8px; /* Bordes redondeados */
+  object-fit: cover; /* Ajuste para que la imagen cubra el contenedor */
+}
+
+/* Títulos h5 en la página Upcoming Games */
+.upcoming-games-page h5 {
+  font-weight: bold; /* Negrita */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  color: #3F51B5; /* Color azul principal */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+}
+
+/* Párrafos en la página Upcoming Games */
+.upcoming-games-page p {
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  color: #212121; /* Texto gris oscuro */
+  font-size: 0.95rem; /* Tamaño de fuente */
+  margin-bottom: 6px; /* Margen inferior */
+}
+
+/* Párrafos con clase text-muted en la página Upcoming Games */
+.upcoming-games-page p.text-muted {
+  color: #212121 !important; /* Forzamos color gris oscuro aunque Bootstrap aplique muted */
+}

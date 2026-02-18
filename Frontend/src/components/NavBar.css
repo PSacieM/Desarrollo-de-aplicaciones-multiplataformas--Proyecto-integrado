@@ -1,0 +1,282 @@
+/* ============================= */
+/* Variables globales de color y fuente */
+/* ============================= */
+:root {
+  --color-principal: #3F51B5;     /* Azul principal de la app */
+  --color-secundario: #9575CD;    /* Morado secundario */
+  --color-acento: #512DA8;        /* Morado acentuado */
+  --color-fondo: #FFFFFF;         /* Fondo blanco por defecto */
+  --color-texto: #212121;         /* Color del texto principal */
+  --fuente-principal: 'Poppins', sans-serif; /* Fuente base para la app */
+}
+
+/* ============================= */
+/* Estilo general de la Navbar */
+/* ============================= */
+.navbar {
+  display: flex; /* Distribuye los elementos de la navbar en fila */
+  justify-content: space-between; /* Separa los elementos a los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  position: relative; /* Posicionamiento relativo para elementos hijos con position:absolute */
+  font-family: var(--fuente-principal); /* Aplica la fuente principal */
+  background-color: var(--color-fondo) !important; /* Fondo blanco */
+  color: var(--color-texto); /* Color del texto */
+}
+
+/* ============================= */
+/* Estilo del logo de la app */
+/* ============================= */
+.navbar-logo {
+  width: 65px !important; /* Anchura fija de 65px */
+  height: auto !important; /* Altura proporcional (auto) */
+  object-fit: contain; /* Hace que la imagen encaje sin deformarse */
+  flex-shrink: 0; /* Evita que el logo se reduzca si no cabe */
+}
+
+/* ============================= */
+/* Marca y texto de la app */
+/* ============================= */
+.navbar-brand {
+  font-weight: 600; /* Texto en negrita */
+  font-size: 20px; /* Tamaño del texto */
+  color: var(--color-texto) !important; /* Color del texto */
+  font-family: var(--fuente-principal); /* Fuente */
+}
+
+.navbar-brand:hover {
+  color: var(--color-principal) !important; /* Cambia el color en hover */
+}
+
+/* ============================= */
+/* Contenedor del menú hamburguesa */
+/* ============================= */
+.dropdown-wrapper {
+  margin-left: 50px; /* Espacio a la izquierda */
+  display: flex; /* Distribuye elementos en fila */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* ============================= */
+/* Estilo de los íconos de usuario y enlaces */
+/* ============================= */
+.navbar-nav {
+  display: flex; /* Muestra los elementos en fila */
+  align-items: center; /* Centra verticalmente */
+  gap: 15px; /* Espacio horizontal entre elementos */
+  font-family: var(--fuente-principal); /* Fuente */
+}
+
+.navbar-nav a,
+.navbar-nav span {
+  color: var(--color-texto); /* Color inicial */
+  font-weight: 500; /* Peso medio */
+}
+
+.navbar-nav a:hover,
+.navbar-nav span:hover {
+  color: var(--color-principal); /* Cambia color al pasar el ratón */
+  text-decoration: underline; /* Subraya el texto */
+}
+
+/* ============================= */
+/* Estilo del formulario de búsqueda */
+/* ============================= */
+.search-bar,
+.navbar form {
+  max-width: 500px; /* Máximo ancho permitido */
+  flex-grow: 1; /* Permite que crezca para ocupar espacio disponible */
+  font-family: var(--fuente-principal); /* Fuente */
+}
+
+.navbar form input {
+  font-family: var(--fuente-principal); /* Fuente */
+  color: var(--color-texto); /* Color del texto */
+}
+
+.navbar .fa-search {
+  color: var(--color-principal); /* Color inicial del icono de búsqueda */
+}
+
+.navbar .fa-search:hover {
+  color: var(--color-acento); /* Color al pasar el ratón */
+  cursor: pointer; /* Cursor en forma de mano (interactivo) */
+}
+
+/* ============================= */
+/* Centrado del buscador */
+/* ============================= */
+.search-bar-wrapper {
+  display: flex; /* Distribuye en fila */
+  justify-content: center; /* Centra horizontalmente */
+  width: 100%; /* Ocupa el ancho completo */
+}
+
+.search-bar-centered {
+  position: absolute; /* Posición absoluta dentro del contenedor padre */
+  left: 50%; /* Centro horizontal */
+  top: 50%; /* Centro vertical */
+  transform: translate(-50%, -50%); /* Ajuste para centrar perfectamente */
+  max-width: 500px; /* Máximo ancho */
+  width: 100%; /* Ancho completo disponible */
+}
+
+/* ============================= */
+/* Estilo de hover/click en menú desplegable */
+/* ============================= */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+  background-color: #3F51B5 !important; /* Fondo azul en hover o focus */
+  color: #fff !important; /* Texto blanco */
+}
+
+/* ============================= */
+/* Estilo de iconos con texto */
+/* ============================= */
+.nav-icon-text {
+  display: flex; /* Elementos en fila */
+  align-items: center; /* Centrado vertical */
+  gap: 6px; /* Espacio entre icono y texto */
+  font-weight: 500; /* Peso medio */
+  white-space: nowrap; /* Evita que se parta en varias líneas */
+}
+
+/* ============================= */
+/* Estilos responsive para móviles y pantallas pequeñas */
+/* ============================= */
+
+@media (max-width: 1366px) {
+  .navbar .container {
+    flex-direction: row !important; /* Elementos en fila */
+    align-items: center !important; /* Centrado vertical */
+    justify-content: space-between !important; /* Separación entre elementos */
+    flex-wrap: wrap; /* Permite que los elementos se vayan a la siguiente línea si no caben */
+  }
+
+  .navbar-brand {
+    margin-bottom: 0 !important; /* Sin margen inferior */
+  }
+
+  .menu-mobile {
+    position: static; /* Sin posición especial */
+    margin-left: auto; /* Alinea a la derecha */
+  }
+
+  .navbar form {
+    width: 100% !important; /* Ocupa todo el ancho */
+    padding: 0 10px; /* Padding lateral */
+    display: flex; /* En fila */
+    align-items: center; /* Centrado vertical */
+    gap: 8px; /* Espacio entre elementos */
+  }
+
+  .navbar form input {
+    flex: 1; /* Ocupa el espacio disponible */
+  }
+
+  .dropdown-wrapper {
+    order: 3; /* Cambia el orden de renderizado */
+    width: 100%; /* Ancho completo */
+    display: flex; /* Fila */
+    justify-content: center; /* Centrado horizontal */
+    padding-bottom: 5px; /* Espacio inferior */
+  }
+
+  .navbar-nav {
+    flex-direction: column !important; /* Columnas en vez de fila */
+    align-items: center !important; /* Centrado */
+    gap: 10px; /* Espacio entre elementos */
+    width: 100%; /* Ancho completo */
+  }
+
+  .navbar-nav a,
+  .navbar-nav span {
+    width: 100%; /* Enlace ocupa todo el ancho */
+    text-align: center; /* Texto centrado */
+  }
+
+  .navbar .dropdown-toggle {
+    inset: unset !important; /* Resetea el inset */
+    left: auto !important; /* Posicionamiento a la derecha */
+    right: 0 !important;
+    transform: translateX(0) !important; /* Sin desplazamiento */
+    padding: 4px 8px; /* Padding reducido */
+  }
+
+  .navbar .form-control {
+    margin-right: 0 !important; /* Sin margen a la derecha */
+  }
+
+  .navbar .fa-search {
+    font-size: 18px; /* Tamaño más pequeño del icono */
+  }
+
+  .user-actions-responsive {
+    display: flex; /* Fila */
+    flex-direction: row; /* Dirección fila */
+    justify-content: center; /* Centrado */
+    gap: 20px; /* Espacio entre elementos */
+    width: 100%; /* Ancho completo */
+  }
+
+  .user-actions-responsive a,
+  .user-actions-responsive span {
+    width: auto; /* Ancho automático */
+    text-align: center; /* Texto centrado */
+  }
+
+  .search-bar-centered {
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 12px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    position: static; /* Sin posición absoluta */
+    transform: none; /* Sin desplazamiento */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .navbar .container {
+    flex-direction: row !important; /* Fila */
+    align-items: center !important; /* Centrado vertical */
+    justify-content: space-between !important; /* Separación */
+    flex-wrap: wrap; /* Wrap habilitado */
+  }
+
+  .navbar-brand {
+    display: flex; /* Fila */
+    align-items: center; /* Centrado */
+    gap: 10px; /* Espacio entre icono y texto */
+    margin-bottom: 0 !important; /* Sin margen inferior */
+  }
+
+  .menu-mobile {
+    position: static; /* Sin posicionamiento especial */
+    margin-left: auto; /* A la derecha */
+  }
+
+  .search-bar-wrapper {
+    width: 100%; /* Ocupa el ancho completo */
+    margin-top: 12px; /* Espacio superior */
+  }
+
+  .navbar form {
+    width: 100% !important; /* Ancho completo */
+    padding: 0 10px; /* Padding lateral */
+    display: flex; /* Fila */
+    align-items: center; /* Centrado */
+    gap: 8px; /* Espacio entre elementos */
+  }
+
+  .navbar form input {
+    max-width: 100%; /* Ancho completo */
+    flex: 1; /* Ocupa el espacio disponible */
+  }
+}
+
+@media (max-width: 1366px) {
+  .dropdown-menu {
+    left: auto !important; /* Alineación derecha */
+    right: 0 !important;
+    transform: none !important; /* Sin desplazamiento */
+  }
+}

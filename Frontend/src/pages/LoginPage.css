@@ -1,0 +1,73 @@
+/* Variables globales */
+:root {
+  --color-principal: #3F51B5; /* Azul principal */
+  --color-secundario: #9575CD; /* Morado secundario */
+  --color-acento: #512DA8; /* Morado de acento */
+  --color-fondo: #FFFFFF; /* Fondo blanco */
+  --color-texto: #212121; /* Texto negro */
+  --fuente-principal: 'Poppins', sans-serif; /* Fuente principal */
+}
+
+/* Estilo global del body */
+body {
+  font-family: var(--fuente-principal); /* Fuente principal */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  color: var(--color-texto); /* Texto negro */
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+  max-width: 400px; /* Ancho máximo de 400px */
+  margin: 60px auto; /* Centrado vertical (margen superior e inferior) y horizontal (auto) */
+  padding: 30px; /* Espaciado interior */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  font-family: var(--fuente-principal); /* Fuente principal */
+}
+
+/* Título del login */
+.login-container h2 {
+  color: var(--color-principal); /* Azul principal */
+  font-family: var(--fuente-principal); /* Fuente principal */
+  font-weight: 600; /* Negrita */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Etiqueta del formulario (label) */
+.login-container .form-label {
+  font-weight: 500; /* Peso medio */
+  color: var(--color-texto); /* Texto negro */
+}
+
+/* Campo de entrada del formulario */
+.login-container .form-control {
+  font-family: var(--fuente-principal); /* Fuente principal */
+  color: var(--color-texto); /* Texto negro */
+}
+
+/* Botón primario de login */
+.login-container .btn-primary {
+  background-color: var(--color-principal); /* Azul principal */
+  border-color: var(--color-principal); /* Borde azul */
+  font-family: var(--fuente-principal); /* Fuente principal */
+}
+
+/* Hover del botón primario */
+.login-container .btn-primary:hover {
+  background-color: var(--color-acento); /* Morado de acento */
+  border-color: var(--color-acento); /* Borde morado */
+}
+
+/* Enlaces en el formulario de login (ej. "¿Olvidaste tu contraseña?") */
+.login-container a {
+  color: var(--color-principal); /* Azul principal */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso medio */
+}
+
+/* Hover en los enlaces */
+.login-container a:hover {
+  text-decoration: underline; /* Subrayado en hover */
+  color: var(--color-acento); /* Morado de acento */
+}

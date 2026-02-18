@@ -1,0 +1,119 @@
+/* Caja de puntuación media */
+.average-rating-box {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espaciado interior */
+  border-radius: 12px; /* Bordes redondeados */
+  text-align: center; /* Texto centrado */
+  font-size: 1.2rem; /* Tamaño de texto */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Botón general */
+button {
+  background-color: #5865f2; /* Color de fondo base */
+  border: none; /* Sin borde */
+}
+
+/* Botón con clase personalizada "btn-accent" */
+.btn-accent {
+  background-color: #3F51B5; /* Color azul personalizado */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s ease; /* Transición suave de color al hacer hover */
+}
+
+/* Efecto hover en "btn-accent" */
+.btn-accent:hover {
+  background-color: #5865f2; /* Cambio de color en hover */
+}
+
+/* Efecto hover en botón normal */
+button:hover {
+  background-color: #4752c4; /* Cambio de color en hover */
+}
+
+/* Estilo del texto del comentario */
+.comment-text {
+  white-space: pre-wrap; /* Respeta saltos de línea (\n) */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  overflow-wrap: break-word; /* Lo mismo, para compatibilidad */
+  overflow: visible; /* No oculta contenido */
+  width: 100%; /* Ocupa el ancho completo */
+  display: inline-block; /* Se comporta como elemento en línea-bloque */
+}
+
+/* Personalización de badges de Bootstrap */
+.badge.bg-primary {
+  background-color: #3F51B5 !important; /* Azul personalizado */
+}
+
+.badge.bg-secondary {
+  background-color: #9575CD !important; /* Morado personalizado */
+}
+
+.badge.bg-info {
+  background-color: #a27cfd !important; /* Morado claro personalizado */
+}
+
+/* Elemento contenedor de comentario */
+.comment-item {
+  min-height: auto !important; /* Altura automática */
+  height: auto !important; /* Altura automática */
+}
+
+/* Cuerpo del comentario */
+.comment-body {
+  flex: 1 1 auto; /* Flexible */
+  min-width: 0; /* Mínimo ancho 0 */
+  overflow: visible; /* No oculta contenido */
+  display: block; /* Elemento de bloque */
+}
+
+/* Imagen de avatar del usuario en comentarios */
+.comment-avatar {
+  width: 50px; /* Anchura */
+  height: 50px; /* Altura */
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Ajusta la imagen para cubrir sin deformarse */
+}
+
+/* Personalización de la ventana modal */
+.modal-content {
+  border-radius: 12px; /* Bordes redondeados */
+  border: 1px solid #9575CD; /* Borde morado */
+}
+
+/* Responsive para pantallas <= 1366px */
+@media (max-width: 1366px) {
+  .comment-item {
+    flex-direction: column; /* Los comentarios se apilan en columna */
+    align-items: flex-start; /* Alineación al inicio */
+  }
+
+  .comment-text {
+    font-size: 0.95rem; /* Tamaño de texto reducido */
+  }
+
+  .btn-link.btn-sm {
+    padding-left: 0 !important; /* Sin padding a la izquierda */
+    margin-top: 4px; /* Espacio superior */
+  }
+}
+
+/* Responsive para pantallas <= 768px */
+@media (max-width: 768px) {
+  .comment-item {
+    flex-direction: column !important; /* Columna forzada */
+    align-items: flex-start !important; /* Alineación al inicio forzada */
+  }
+
+  .comment-text {
+    font-size: 0.9rem; /* Tamaño de texto aún más reducido */
+  }
+
+  .btn-link.btn-sm {
+    font-size: 0.85rem; /* Tamaño de texto reducido */
+    padding-left: 0 !important; /* Sin padding a la izquierda */
+    margin-top: 4px; /* Espacio superior */
+  }
+}

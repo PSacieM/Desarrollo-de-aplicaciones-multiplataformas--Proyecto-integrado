@@ -1,0 +1,83 @@
+/* Contenedor de cuadrícula para las tarjetas de usuarios */
+.user-grid {
+  display: grid; /* Usamos grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas autoajustables */
+  gap: 12px; /* Espacio entre tarjetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Tarjeta individual de usuario */
+.user-card {
+  background-color: #FFFFFF; /* Fondo blanco */
+  border: 1px solid #DCE1F5; /* Borde lila claro */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 16px; /* Espaciado interno */
+  box-shadow: 0 2px 6px rgba(63, 81, 181, 0.1); /* Sombra suave */
+  display: flex; /* Flexbox para alinear contenido */
+  flex-direction: column; /* Columnas */
+  align-items: center; /* Centrado horizontal */
+  text-align: center; /* Centrado del texto */
+  width: 100%;
+  height: auto;
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+}
+
+/* Efecto hover en la tarjeta de usuario */
+.user-card:hover {
+  transform: translateY(-3px); /* Desplazamiento hacia arriba */
+}
+
+/* Imagen de avatar del usuario */
+.user-avatar {
+  width: 80px; /* Tamaño fijo */
+  height: 80px;
+  border-radius: 50%; /* Redondo */
+  object-fit: cover; /* Recorte de imagen */
+  margin-bottom: 6px; /* Espacio inferior */
+  border: 2px solid #9575CD; /* Borde lila */
+}
+
+/* Nombre de usuario */
+.user-name {
+  font-weight: 600; /* Negrita */
+  font-size: 0.95rem; /* Tamaño de fuente */
+  margin-bottom: 2px; /* Espacio inferior */
+  color: #3F51B5; /* Azul principal */
+}
+
+/* Correo electrónico del usuario */
+.user-email {
+  font-size: 0.8rem; /* Tamaño de fuente */
+  color: #212121; /* Texto gris oscuro */
+  margin-bottom: 2px; /* Espacio inferior */
+  word-break: break-word; /* Romper palabras largas */
+}
+
+/* Rol del usuario */
+.user-role {
+  font-size: 0.75rem; /* Tamaño pequeño */
+  color: #757575; /* Gris claro */
+  margin-bottom: 4px; /* Espacio inferior */
+}
+
+/* Contenedor de botones de acción */
+.user-actions {
+  display: flex; /* Flexbox */
+  gap: 8px; /* Espacio entre botones */
+  margin-top: auto; /* Empuja al final de la tarjeta */
+}
+
+/* Paginación general */
+.pagination {
+  flex-wrap: wrap; /* Permitir múltiples filas */
+  gap: 6px; /* Espacio entre elementos */
+}
+
+/* Texto de los comentarios */
+.comment-text {
+  word-break: break-word; /* Romper palabras largas */
+  white-space: pre-wrap; /* Mantener saltos de línea */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  color: #212121; /* Texto gris oscuro */
+}

@@ -1,0 +1,82 @@
+/* Efecto hover en las tarjetas */
+.hover-card:hover {
+  transform: scale(1.01); /* Escala ligeramente la tarjeta */
+  transition: transform 0.2s ease; /* Transición suave */
+}
+
+/* Estilo de las pestañas (Nav Tabs) - color y fuente */
+.nav-tabs .nav-link {
+  color: #3F51B5 !important; /* Azul principal */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  font-weight: 500; /* Seminegrita */
+}
+
+/* Hover en pestañas */
+.nav-tabs .nav-link:hover {
+  background-color: #3F51B5 !important; /* Fondo azul al pasar el ratón */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+/* Pestaña activa */
+.nav-tabs .nav-link.active {
+  background-color: transparent !important; /* Sin fondo */
+  color: #212121 !important; /* Texto gris oscuro */
+  border-color: #3F51B5 #3F51B5 transparent !important; /* Borde inferior azul */
+  font-weight: 600; /* Negrita */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 520px) {
+
+  /* Tarjeta de lista de usuario - columna en vez de fila */
+  .user-list-card {
+    flex-direction: column !important; /* Layout en columna */
+    align-items: center !important; /* Centrado horizontal */
+    text-align: center; /* Texto centrado */
+  }
+
+  /* Contenedor interno de la tarjeta */
+  .user-list-card > .d-flex.align-items-center {
+    flex-direction: column !important; /* Layout en columna */
+    align-items: center !important; /* Centrado horizontal */
+  }
+
+  /* Imagen del juego / usuario */
+  .user-list-card img {
+    width: 120px !important; /* Ancho imagen reducido */
+    height: 160px !important; /* Alto imagen reducido */
+    object-fit: cover; /* Imagen ajustada sin deformarse */
+    margin-bottom: 10px; /* Separación inferior */
+  }
+
+  /* Título (nombre del juego / usuario) */
+  .user-list-info h5 {
+    font-size: 1.1rem; /* Tamaño de fuente más pequeño */
+    margin-top: 5px; /* Espacio superior */
+  }
+
+  /* Información adicional (ejemplo: subtítulo, género, plataforma) */
+  .user-list-info small {
+    display: block; /* Mostrar en bloque */
+    margin-bottom: 8px; /* Espacio inferior */
+  }
+
+  /* Acciones de la tarjeta (por ejemplo: botones) */
+  .user-list-actions {
+    align-items: center !important; /* Centrado horizontal */
+    margin-top: 10px; /* Separación superior */
+  }
+
+  /* Badge dentro de las acciones */
+  .user-list-actions .badge {
+    font-size: 1rem; /* Tamaño de fuente */
+    padding: 8px 16px; /* Relleno interno */
+    margin-bottom: 10px; /* Separación inferior */
+  }
+
+  /* Botón de eliminar dentro de las acciones */
+  .user-list-actions .btn-danger {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    padding: 6px 12px; /* Relleno interno reducido */
+  }
+}

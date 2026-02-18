@@ -1,0 +1,12 @@
+/* Estilo general del body */
+body {
+  margin: 0; /* Eliminar márgenes por defecto */
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif; /* Fuente global */
+  -webkit-font-smoothing: antialiased; /* Suavizado de fuentes en Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Suavizado de fuentes en macOS */
+}
+
+/* Estilo para etiquetas <code> */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; /* Fuente monoespaciada para código */
+}

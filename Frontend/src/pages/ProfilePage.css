@@ -1,0 +1,41 @@
+/* Caja circular para mostrar la puntuación */
+.rating-box {
+  width: 50px; /* Ancho fijo de 50px */
+  aspect-ratio: 1 / 1; /* Mantener proporción 1:1 (cuadrado que será circular con border-radius) */
+  background-color: #3F51B5; /* Color de fondo azul principal */
+  color: #fff; /* Texto en blanco */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 1rem; /* Tamaño de texto */
+  border-radius: 50%; /* Bordes completamente redondeados (círculo) */
+  border: 2px solid #fff; /* Borde blanco */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor */
+  transition: transform 0.3s ease; /* Animación suave para transformaciones */
+}
+
+/* Efecto de hover en la caja de puntuación */
+.rating-box:hover {
+  transform: scale(1.1); /* Aumentar tamaño al 110% en hover */
+}
+
+/* Badge personalizado para mostrar puntuación */
+.badge-score {
+  background-color: #6f2be4 !important; /* Morado oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Texto de comentario */
+.comment-text {
+  word-break: break-word; /* Romper palabras largas si es necesario */
+  white-space: pre-wrap; /* Mantener saltos de línea y espacios */
+}
+
+/* Media query: estilos para pantallas pequeñas (máx. 576px) */
+@media (max-width: 576px) {
+  .rating-box {
+    width: 40px; /* Caja de puntuación más pequeña (40px de ancho) */
+    font-size: 0.9rem; /* Texto ligeramente más pequeño */
+  }
+}

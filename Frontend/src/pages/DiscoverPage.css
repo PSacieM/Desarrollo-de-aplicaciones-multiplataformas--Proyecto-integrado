@@ -1,0 +1,114 @@
+/* Estilo general de cada tarjeta de juego en la página Discover */
+.discover-page .game-card {
+  display: flex; /* Muestra los elementos en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Separa la info a los lados */
+  padding: 10px; /* Espacio interior */
+  background-color: #f8f9fa; /* Color de fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.2s; /* Animación suave al cambiar el color de fondo */
+}
+
+/* Efecto hover: cambia el fondo cuando el usuario pasa el ratón */
+.discover-page .game-card:hover {
+  background-color: #e9ecef;
+}
+
+/* Imagen del juego */
+.discover-page .game-image {
+  flex-shrink: 0; /* No permite que la imagen se reduzca */
+  width: 80px; /* Anchura fija */
+  height: 120px; /* Altura fija */
+  object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Información textual del juego */
+.discover-page .game-info {
+  flex-grow: 1; /* Ocupa todo el espacio restante disponible */
+  padding-left: 15px; /* Espacio a la izquierda de la imagen */
+}
+
+/* Puntuación del juego */
+.discover-page .game-score {
+  font-size: 24px; /* Tamaño de texto grande */
+  font-weight: bold; /* Texto en negrita */
+  color: #ffffff; /* Texto blanco */
+  background-color: #007bff; /* Fondo azul */
+  padding: 5px 15px; /* Espaciado interior */
+  border-radius: 8px; /* Bordes redondeados */
+  display: flex; /* Centrado del contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  margin-left: auto; /* Empuja el elemento a la derecha */
+}
+
+/* Responsive: para pantallas pequeñas (<= 768px) */
+@media (max-width: 768px) {
+  /* La card del juego pasa a ser en columna en vez de fila */
+  .discover-page .game-card {
+    flex-direction: column; /* Los elementos se apilan en columna */
+    text-align: center; /* Texto centrado */
+  }
+
+  /* La puntuación se muestra debajo de la información */
+  .discover-page .game-score {
+    margin-top: 10px;
+  }
+}
+
+/* Responsive: para pantallas pequeñas (<= 768px), más estilos específicos */
+@media (max-width: 768px) {
+  /* Contenedor flexible de la parte superior de la página */
+  .discover-page .d-flex.align-items-center.position-relative.mb-3 {
+    display: flex;
+    flex-direction: row; /* Muestra en fila */
+    align-items: flex-start; /* Alinea al principio verticalmente */
+    gap: 10px; /* Espacio entre elementos */
+  }
+
+  /* Tarjeta de Bootstrap adaptada a móvil */
+  .discover-page .card .d-flex.align-items-center {
+    flex-direction: column !important; /* Muestra en columna */
+    align-items: center !important; /* Centrado horizontal */
+    text-align: center; /* Texto centrado */
+    width: 100%; /* Ancho completo */
+  }
+
+  /* Imagen dentro de la tarjeta */
+  .discover-page .card img {
+    width: 140px !important; /* Ancho fijo */
+    height: 200px !important; /* Alto fijo */
+    object-fit: cover; /* Imagen cubre el espacio */
+    margin-bottom: 10px; /* Espacio inferior */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+
+  /* Título de la tarjeta */
+  .discover-page .card h5 {
+    font-size: 1rem; /* Tamaño de texto */
+    color: #3F51B5; /* Azul */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    margin-bottom: 5px; /* Espacio inferior */
+  }
+
+  /* Párrafo de la tarjeta */
+  .discover-page .card p {
+    font-size: 0.9rem; /* Tamaño de texto */
+    color: #512DA8; /* Morado */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    margin-bottom: 8px; /* Espacio inferior */
+  }
+
+  /* Puntuación adaptada a móvil */
+  .discover-page .game-score {
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Texto más pequeño */
+    padding: 6px 12px; /* Espaciado interior */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 6px; /* Espacio superior */
+    align-self: center; /* Centrado en la columna */
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto;
+  }
+}

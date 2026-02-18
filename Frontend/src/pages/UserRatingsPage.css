@@ -1,0 +1,72 @@
+/* Imagen de portada en las puntuaciones */
+.rating-cover {
+  width: 80px; /* Ancho fijo */
+  height: 100px; /* Alto fijo */
+  object-fit: cover; /* Cubrir sin deformar */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Caja circular que muestra la puntuación */
+.rating-score-box {
+  margin-top: 8px; /* Margen superior */
+  width: 50px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
+  font-size: 1.2rem; /* Tamaño del texto */
+  border-radius: 50%; /* Forma circular */
+  background-color: #3F51B5; /* Fondo azul principal */
+  color: white; /* Texto blanco */
+  display: flex; /* Flex para centrar contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+}
+
+/* Estilos responsivos (pantallas pequeñas) */
+@media (max-width: 576px) {
+  /* Cabecera de la página de puntuaciones */
+  .user-ratings-header {
+    flex-direction: column !important; /* Columnas en lugar de fila */
+    align-items: flex-start !important; /* Alinear al inicio */
+    gap: 0.5rem; /* Espaciado entre elementos */
+  }
+
+  /* Título de la cabecera */
+  .user-ratings-header h3 {
+    font-size: 1.25rem; /* Tamaño del título reducido */
+  }
+
+  /* Tarjeta de puntuación completa */
+  .rating-card {
+    flex-direction: column !important; /* Columna en móviles */
+    align-items: center !important; /* Centrado horizontal */
+    text-align: center; /* Texto centrado */
+  }
+
+  /* Contenedor de la información del juego */
+  .rating-info {
+    flex-direction: column !important; /* Columnas en móviles */
+    align-items: center !important; /* Centrado horizontal */
+    text-align: center; /* Texto centrado */
+    margin-bottom: 10px; /* Margen inferior */
+  }
+
+  /* Imagen de portada en móviles */
+  .rating-cover {
+    width: 70px; /* Ancho más pequeño */
+    height: auto; /* Alto automático */
+    margin-bottom: 10px; /* Separación inferior */
+  }
+
+  /* Caja circular con puntuación en móviles (igual que en desktop) */
+  .rating-score-box {
+    margin-top: 8px; /* Margen superior */
+    width: 50px; /* Ancho fijo */
+    height: 50px; /* Alto fijo */
+    font-size: 1.2rem; /* Tamaño del texto */
+    border-radius: 50%; /* Forma circular */
+    background-color: #3F51B5; /* Fondo azul principal */
+    color: white; /* Texto blanco */
+    display: flex; /* Flex para centrar contenido */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+  }
+}

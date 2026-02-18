@@ -1,0 +1,83 @@
+/* Variables globales de colores y fuente */
+:root {
+  --color-principal: #3F51B5; /* Azul principal */
+  --color-secundario: #9575CD; /* Lila */
+  --color-acento: #512DA8; /* Morado oscuro (acento) */
+  --color-fondo: #FFFFFF; /* Fondo blanco */
+  --color-texto: #212121; /* Texto gris oscuro */
+  --fuente-principal: 'Poppins', sans-serif; /* Fuente principal */
+}
+
+/* Estilo global del body */
+body {
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  color: var(--color-texto); /* Texto gris oscuro */
+}
+
+/* Contenedor principal del formulario de registro */
+.register-container {
+  max-width: 450px; /* Ancho máximo */
+  margin: 40px auto; /* Centrado vertical con margen superior */
+  padding: 30px; /* Espaciado interno */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Título del formulario */
+.register-container h2 {
+  color: var(--color-principal); /* Color azul principal */
+  font-weight: 600; /* Negrita */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Etiquetas del formulario */
+.register-container label {
+  font-weight: 500; /* Seminegrita */
+  color: var(--color-texto); /* Texto gris oscuro */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Inputs del formulario */
+.register-container .form-control {
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+  color: var(--color-texto); /* Texto gris oscuro */
+}
+
+/* Botón de enviar */
+.register-container .btn-primary {
+  background-color: var(--color-principal); /* Fondo azul principal */
+  border-color: var(--color-principal); /* Borde azul */
+  color: #fff; /* Texto blanco */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Efecto hover del botón de enviar */
+.register-container .btn-primary:hover {
+  background-color: var(--color-acento); /* Morado oscuro (acento) */
+  border-color: var(--color-acento); /* Borde morado oscuro */
+}
+
+/* Estilo de párrafos */
+.register-container p {
+  font-size: 14px; /* Tamaño de fuente */
+  color: var(--color-texto); /* Texto gris oscuro */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Enlaces */
+.register-container a {
+  color: var(--color-principal); /* Azul principal */
+  font-weight: 500; /* Seminegrita */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Efecto hover de enlaces */
+.register-container a:hover {
+  text-decoration: underline; /* Subrayado al hacer hover */
+  color: var(--color-acento); /* Morado oscuro (acento) */
+}

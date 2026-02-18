@@ -1,0 +1,112 @@
+/* Estilo del contenedor principal de la app */
+.App {
+  text-align: center;
+}
+
+/* Estilo del logo de React */
+.App-logo {
+  height: 40vmin; /* Altura adaptable */
+  pointer-events: none; /* No interactuable */
+}
+
+/* Animación del logo de React (si no se prefiere reducir animaciones) */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Animación infinita */
+  }
+}
+
+/* Cabecera principal de la App (por defecto en plantilla) */
+.App-header {
+  background-color: #282c34; /* Fondo oscuro */
+  min-height: 100vh; /* Altura mínima de pantalla completa */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección vertical */
+  align-items: center; /* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+  font-size: calc(10px + 2vmin); /* Tamaño de fuente adaptativo */
+  color: white; /* Texto blanco */
+}
+
+/* Enlaces en la cabecera de la App (por defecto en plantilla) */
+.App-link {
+  color: #61dafb; /* Azul claro */
+}
+
+/* Animación de rotación del logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Rotación inicial */
+  }
+  to {
+    transform: rotate(360deg); /* Rotación completa */
+  }
+}
+
+/* Estilo global del body */
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #212121; /* Texto gris oscuro */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+}
+
+/* Estilo general de los enlaces */
+a {
+  color: #3F51B5; /* Azul principal */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Efecto hover en los enlaces */
+a:hover {
+  color: #512DA8; /* Morado oscuro */
+  text-decoration: underline; /* Subrayado */
+}
+
+/* Botón primario (Bootstrap) */
+.btn-primary {
+  background-color: #3F51B5; /* Azul principal */
+  border-color: #3F51B5; /* Borde azul */
+}
+
+/* Efecto hover en el botón primario */
+.btn-primary:hover {
+  background-color: #512DA8; /* Morado oscuro */
+  border-color: #512DA8; /* Borde morado oscuro */
+}
+
+/* Botón primario con contorno (Bootstrap) */
+.btn-outline-primary {
+  color: #3F51B5; /* Azul principal */
+  border-color: #3F51B5; /* Borde azul */
+}
+
+/* Efecto hover en el botón outline primary */
+.btn-outline-primary:hover {
+  background-color: #3F51B5; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+}
+
+/* Botón de éxito (Bootstrap) */
+.btn-success {
+  background-color: #9575CD; /* Lila */
+  border-color: #9575CD; /* Borde lila */
+}
+
+/* Efecto hover en el botón de éxito */
+.btn-success:hover {
+  background-color: #512DA8; /* Morado oscuro */
+  border-color: #512DA8; /* Borde morado oscuro */
+}
+
+/* Estilo general de las tarjetas (Bootstrap) */
+.card {
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo general de los modales (Bootstrap) */
+.modal-content {
+  border-radius: 10px; /* Bordes redondeados */
+}

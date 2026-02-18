@@ -1,0 +1,225 @@
+/* Variables globales de colores y fuente */
+:root {
+  --color-principal: #3F51B5; /* Azul principal */
+  --color-secundario: #9575CD; /* Lila */
+  --color-acento: #512DA8; /* Morado oscuro */
+  --color-fondo: #FFFFFF; /* Fondo blanco */
+  --color-texto: #212121; /* Texto gris oscuro */
+  --fuente-principal: 'Poppins', sans-serif; /* Fuente Poppins */
+}
+
+/* Estilo global del body */
+body {
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  color: var(--color-texto); /* Texto gris oscuro */
+}
+
+/* Contenedor de la página de búsqueda */
+.search-page {
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+  color: var(--color-texto); /* Texto gris oscuro */
+}
+
+/* Título de la búsqueda */
+.search-page h2 {
+  color: var(--color-principal); /* Azul principal */
+  font-weight: 600; /* Negrita */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Etiquetas del formulario */
+.search-page .form-label {
+  font-weight: 500; /* Seminegrita */
+  color: var(--color-texto); /* Texto gris oscuro */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Selects del formulario */
+.search-page .form-select {
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+  color: var(--color-texto); /* Texto gris oscuro */
+}
+
+/* Tarjetas de juego y usuario */
+.search-page .card,
+.search-page .user-card {
+  background-color: var(--color-fondo); /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde gris claro */
+  color: var(--color-texto); /* Texto gris oscuro */
+  font-family: var(--fuente-principal); /* Fuente Poppins */
+}
+
+/* Hover en las tarjetas */
+.search-page .card:hover,
+.search-page .user-card:hover {
+  border-color: var(--color-acento); /* Morado oscuro */
+  box-shadow: 0 0 8px rgba(63, 81, 181, 0.2); /* Sombra azul suave */
+}
+
+/* Enlaces */
+.search-page a {
+  color: var(--color-principal); /* Azul principal */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Seminegrita */
+}
+
+/* Hover en los enlaces */
+.search-page a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+  color: var(--color-acento); /* Morado oscuro */
+}
+
+/* Imagen miniatura de juego */
+.search-page .game-thumbnail {
+  width: 100px; /* Ancho fijo */
+  height: auto; /* Altura automática */
+  object-fit: cover; /* Cubrir */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-right: 15px; /* Separación derecha */
+}
+
+/* Tarjeta de juego */
+.search-page .card {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+  min-height: 60px; /* Altura mínima */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Contenedor de imagen */
+.search-page .image-container {
+  flex-shrink: 0; /* No reducir */
+}
+
+/* Grid de usuarios */
+.user-grid {
+  display: grid; /* Grid */
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+  gap: 15px; /* Separación entre elementos */
+  margin-top: 15px; /* Margen superior */
+}
+
+/* Tarjeta de usuario */
+.user-card {
+  width: 150px; /* Ancho fijo */
+  height: 150px; /* Alto fijo */
+  background-color: #f8f9fa; /* Gris claro */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección vertical */
+  align-items: center; /* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+  transition: transform 0.2s; /* Transición suave */
+  cursor: pointer; /* Cursor tipo puntero */
+}
+
+/* Hover en tarjeta de usuario */
+.user-card:hover {
+  transform: scale(1.05); /* Aumentar tamaño */
+}
+
+/* Tarjeta de juego */
+.game-card {
+  display: flex; /* Flexbox */
+  flex-direction: row; /* Dirección horizontal */
+  align-items: center; /* Centrado vertical */
+  border: 1px solid #ddd; /* Borde gris claro */
+  background-color: #f8f9fa; /* Gris claro */
+  padding: 10px; /* Espaciado interno */
+  transition: transform 0.2s; /* Transición suave */
+}
+
+/* Hover en tarjeta de juego */
+.game-card:hover {
+  transform: scale(1.02); /* Aumentar tamaño */
+}
+
+/* Ajuste en selects */
+.search-page select,
+.search-page .form-select {
+  width: 100%; /* Ancho completo */
+  max-width: 100%; /* Máximo ancho completo */
+  box-sizing: border-box; /* Incluye borde y padding */
+  overflow-x: auto; /* Scroll horizontal si es necesario */
+  text-overflow: ellipsis; /* Puntos suspensivos */
+  white-space: nowrap; /* No saltar línea */
+}
+
+/* Responsive (pantallas pequeñas) */
+@media (max-width: 768px) {
+
+  /* Select pequeño */
+  .search-page .form-select {
+    font-size: 14px; /* Tamaño fuente reducido */
+    padding-right: 32px; /* Padding derecho */
+  }
+
+  /* Etiquetas y grupo de formulario */
+  .search-page .form-group,
+  .search-page .form-label {
+    width: 100%; /* Ancho completo */
+  }
+
+  /* Opciones de select */
+  .search-page .form-select option {
+    white-space: normal; /* Permitir saltos de línea */
+  }
+
+  select option {
+    max-width: 100vw; /* Máximo ancho de viewport */
+    overflow-wrap: break-word; /* Romper palabras */
+    white-space: normal; /* Permitir saltos */
+  }
+
+  /* Tarjeta de juego (modo columna) */
+  .game-card {
+    flex-direction: column !important; /* Dirección vertical */
+    align-items: stretch; /* Estirado */
+    padding: 10px; /* Espaciado */
+  }
+
+  /* Body de tarjeta de juego */
+  .game-card .card-body {
+    padding: 0 !important; /* Sin padding */
+  }
+
+  /* Título del juego */
+  .game-card .card-body h5 {
+    font-size: 16px; /* Tamaño de fuente reducido */
+    margin-bottom: 8px; /* Margen inferior */
+    text-align: center; /* Centrado */
+  }
+
+  /* Contenido de la tarjeta */
+  .game-card-content {
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Dirección horizontal */
+    align-items: flex-start; /* Alinear arriba */
+    gap: 12px; /* Separación entre elementos */
+  }
+
+  /* Imagen del juego */
+  .game-card img {
+    width: 100px; /* Ancho fijo */
+    height: 140px; /* Alto fijo */
+    object-fit: cover; /* Cubrir */
+    border-radius: 6px; /* Bordes redondeados */
+  }
+
+  /* Detalles de la tarjeta */
+  .game-card-details {
+    flex-grow: 1; /* Ocupar espacio disponible */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Dirección vertical */
+    justify-content: center; /* Centrado vertical */
+    font-size: 14px; /* Tamaño de fuente reducido */
+  }
+
+  /* Texto en los detalles */
+  .game-card-details p {
+    margin: 0 0 6px 0; /* Margen inferior */
+  }
+}

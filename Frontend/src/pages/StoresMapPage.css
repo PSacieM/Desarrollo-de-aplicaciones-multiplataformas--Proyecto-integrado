@@ -1,0 +1,82 @@
+/* Contenedor del mapa (flex para centrar) */
+.map-wrapper {
+  display: flex; /* Flexbox para centrar */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  padding: 1rem; /* Espaciado interior */
+}
+
+/* Caja que contiene el mapa */
+.map-container {
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  max-width: 1200px; /* Ancho máximo */
+  height: 900px; /* Altura fija */
+  border-radius: 12px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el contenido que se desborde */
+  box-shadow: 0 0 12px rgba(63, 81, 181, 0.1); /* Sombra suave azulada */
+  border: 2px solid #DCE1F5; /* Borde azul claro */
+}
+
+/* Título superior del mapa */
+.map-title {
+  margin-top: 4rem; /* Margen superior */
+  margin-bottom: 2rem; /* Margen inferior */
+  font-size: 1.8rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+  color: #3F51B5; /* Color azul principal */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  text-align: center; /* Texto centrado */
+}
+
+/* Fuente para todo el contenido del mapa */
+.leaflet-container {
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+}
+
+/* Texto centrado debajo del mapa (por ejemplo, descripción) */
+.text-center.mt-4 {
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  color: #212121; /* Color gris oscuro */
+  font-size: 1rem; /* Tamaño de fuente normal */
+}
+
+/* Enlaces dentro del popup del mapa */
+.leaflet-popup-content a {
+  color: #3F51B5; /* Color azul principal */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  text-decoration: underline; /* Subrayado */
+}
+
+/* Hover en los enlaces del popup */
+.leaflet-popup-content a:hover {
+  color: #512DA8; /* Morado (color acento) */
+}
+
+/* Estilo general del contenido del popup */
+.leaflet-popup-content {
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  color: #212121; /* Color gris oscuro */
+  font-size: 0.9rem; /* Tamaño de fuente ligeramente pequeño */
+}
+
+/* Responsive - Pantallas hasta 1366px */
+@media (max-width: 1366px) {
+  .map-container {
+    height: 400px; /* Altura reducida */
+    width: 600px; /* Ancho reducido */
+  }
+}
+
+/* Responsive - Pantallas hasta 768px */
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px; /* Altura reducida */
+  }
+}
+
+/* Responsive - Pantallas hasta 480px */
+@media (max-width: 480px) {
+  .map-container {
+    height: 300px; /* Altura más reducida aún */
+  }
+}
